@@ -1,0 +1,209 @@
+/* General body styles */
+body {
+  font-family: "Open Sans", sans-serif; /* Added fallback font */
+  background-color: #f0f0f0; /* Dark background */
+  color: black; /* Light text color */
+  margin: 0;
+}
+
+/* Header and Navigation styles */
+header {
+  background-color: #f0f0f0; /* Dark purple background for the navbar */
+  padding: 10px 20px; /* Padding around the header */
+}
+
+nav {
+  text-align: right; /* Align navbar items to the right */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Flex layout for horizontal alignment */
+  justify-content: flex-end; /* Align items to the right */
+}
+
+nav ul li {
+  margin: 0 15px; /* Space between items */
+}
+
+nav a {
+  color: black; /* Light color for nav links */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+nav a:hover {
+  color: blue; /* Lighter shade of purple on hover */
+  transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Hero section styles */
+#hero {
+  text-align: center; /* Center text */
+  padding: 80px 20px; /* More padding for breathing effect */
+  position: relative; /* Enable positioning for child elements */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Video styles */
+.hero-video {
+  position: absolute; /* Position it absolutely within the hero */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the entire section */
+  z-index: 1; /* Position behind the text */
+
+  filter: blur(2px);
+  border-radius: 20px;
+}
+
+/* Cool Heading Styles */
+#hero h2 {
+  font-size: 3.5rem; /* Larger font size */
+  letter-spacing: 2px; /* Space between letters */
+  text-transform: uppercase; /* Uppercase text */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+  position: relative; /* Position relative to the container */
+  z-index: 2; /* Position above the video */
+  color: #fff; /* Text color */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Subtitle Styles */
+#hero p {
+  font-size: 1.5rem; /* Subtitle font size */
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for subtitle */
+  position: relative; /* Position relative to the container */
+  z-index: 2; /* Position above the video */
+  color: white; /* Subtitle color */
+  text-align: left; /* Align text to the left */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End in original position */
+  }
+}
+
+/* CTA buttons styles */
+.cta-buttons {
+  margin-top: 20px; /* Space between text and buttons */
+  text-align: left; /* Align buttons to the left */
+}
+
+.cta-button {
+  display: inline-block; /* Keep buttons inline */
+  margin: 10px; /* Space between buttons */
+  padding: 10px 20px;
+  background-color: white; /* Purple button color */
+  color: #000; /* Button text color */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 2;
+  position: relative;
+}
+
+.cta-button:hover {
+  background-color: grey; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Section container styles */
+.container {
+  padding: 20px;
+  margin: 10px; /* Margin around sections */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #dddddd; /* Dark purple background for sections */
+}
+
+/* Education and Project item styles */
+.education-item,
+.project {
+  margin: 10px 0; /* Space between items */
+  padding: 10px; /* Padding inside items */
+  background-color: dddddd; /* Darker background color for items */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.education-item:hover,
+.project:hover {
+  background-color: #fff; /* Darker shade on hover */
+}
+form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+}
+
+form input,
+form textarea {
+  margin: 10px 0; /* Space between inputs */
+  padding: 10px; /* Padding inside inputs */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #555; /* Dark border */
+  background-color: #fff; /* Input background color */
+  color: #000; /* Input text color */
+}
+
+form button {
+  background-color: #fff; /* Button color */
+  color: #000; /* Button text color */
+  padding: 10px; /* Padding inside button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+form button:hover {
+  background-color: grey; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Footer styles */
+footer {
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding around footer */
+  background-color: #0c0c0c; /* Dark purple footer */
+  color: #e2d1f9; /* Light color for footer text */
+}
+
+footer .social-links {
+  list-style-type: none; /* Remove list styling */
+  padding: 0; /* Remove padding */
+}
+
+footer .social-links li {
+  display: inline; /* Display links inline */
+  margin: 0 10px; /* Space between links */
+}
+
+footer a {
+  color: #000; /* Social link color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-end; /* Align items to the right on mobile */
+  }
+
+  #hero h2 {
+    font-size: 2em; /* Smaller font size on mobile */
+  }
+}
